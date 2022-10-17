@@ -7,6 +7,7 @@
     --color-background-secondary: #2F303A; 
     --color-background-accent: #F5F4FA;
     --color-border-header: #ECECEC;
+    --color-fill-icons: #AFB1B8;
 }
 
 h1, h2, h3, h4, h5, p{
@@ -71,6 +72,7 @@ img{
     color: var(--color-black);
 }
 
+
 /* site-nav */
 .site-nav{
     list-style: none;
@@ -119,6 +121,18 @@ img{
 .auth-nav-link:focus{
     color: var(--color-brand);
 }
+
+.address-icon {
+    margin-right: 10px;
+    fill: var(--color-primary);
+}
+
+.auth-nav-link:hover .address-icon,
+.auth-nav-link:focus .address-icon {
+    fill: var(--color-brand);
+}
+
+
 
 /* Main */
 /* Hero */
@@ -187,6 +201,13 @@ img{
     margin: 0;
     padding: 0;
 }
+
+.features-item {
+    width: 270px;
+}
+
+
+
 .features{
     color: var(--color-inverted);
     font-weight: 700;
@@ -201,6 +222,17 @@ img{
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
+}
+
+.features-image {
+    display: flex;
+    width: 270px;
+    height: 120px;
+    border-radius: 4px;
+    background-color: var(--color-background-accent);
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
 }
 /* Work */
 
@@ -265,17 +297,85 @@ img{
     text-align: center;
 }
 
+.team-social-list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-top: 16px;
+    padding-left: 0;
+}
+
+.team-social-link {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--color-background-primary);
+}
+
+.team-social-link:hover,
+.team-social-link:focus {
+    background-color: var(--color-brand);
+}
+
+.team-social-icon {
+    fill: var(--color-fill-icons);
+}
+
+.team-social-link:hover .team-social-icon,
+.team-social-link:focus .team-social-icon {
+    fill: var(--color-background-primary);
+}
+
+.team-social-item:not(:last-child) {
+    background-color: var(--color-background-primary);
+}
+
 /* Clients */
 
 .clients-list{
     display: flex;
-    flex-basis: calc((100%-150px) / 5);
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+    padding-left: 0;
 }
+
+.clients-link {
+    display: flex;
+    width: 170px;
+    height: 92px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--color-fill-icons);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.clients-icon {
+    fill: var(--color-fill-icons);
+}
+
+.clients-link:hover,
+.clients-link:focus {
+    background-color: var(--color-background-primary);
+    border-color: var(--color-brand);
+}
+
+.clients-link:hover .clients-icon,
+.clients-link:focus .clients-icon {
+    fill: var(--color-brand);
+}
+
+
 
 /* Footer */
 
 .foot{
     padding: 0;
+    margin-bottom: 20px;
 }
 
 .logo-footer {
@@ -288,8 +388,9 @@ img{
     padding: 60px 0;
 }
 
-.foot{
-    margin-bottom: 20px;
+.footer-container{
+    display: flex;
+    align-items: baseline;
 }
 
 .foot-link{
@@ -328,6 +429,52 @@ img{
 .foot-link-contacts:focus {
     color: var(--color-brand);
 }
+
+/* Subscription */
+
+.subscription-tittle {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--color-background-primary);
+}
+
+.subscription-list {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    gap: 10px;
+}
+
+.subscription {
+    margin-left: 70px;
+}
+
+.subscription-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.subscription-icon {
+    fill: var(--color-background-primary);
+}
+
+.subscription-link:hover,
+.subscription-link:focus {
+    background-color: var(--color-brand);
+}
+
+
+
+
 /* Portfolio */
 
 .filter{
@@ -380,6 +527,15 @@ img{
     max-width: 370px;
 }
 
+.project-link {
+    display: block;
+    text-decoration: none;
+}
+
+.project-link:hover,
+.project-link:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 .project-text{
     padding: 20px 24px;
     border-left: 1px solid #EEEEEE;
