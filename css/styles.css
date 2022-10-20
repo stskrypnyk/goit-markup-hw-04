@@ -116,6 +116,7 @@ img{
     text-decoration: none;
     padding: 32px 0;
     display: flex;
+    align-items: center;
 }
 .auth-nav-link:hover,
 .auth-nav-link:focus{
@@ -138,10 +139,12 @@ img{
 /* Hero */
 .hero{
     padding: 200px 0;
+    max-width: 1600px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/main-photo.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    margin: 0 auto;
 }
 .hero-title{
     color: var(--color-background-primary);
@@ -303,11 +306,17 @@ img{
     list-style: none;
     margin-top: 16px;
     padding-left: 0;
+    gap: 10px;
+}
+
+.team-social-item{
+    width: 44px;
+    height: 44px;
 }
 
 .team-social-link {
-    width: 44px;
-    height: 44px;
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -336,17 +345,24 @@ img{
 /* Clients */
 
 .clients-list{
+    margin: 0;
     display: flex;
     align-items: center;
-    gap: 30px;
     list-style: none;
     padding-left: 0;
+    gap: 30px;
+    
+}
+
+.clients-logo{
+    height: 92px;
+    width: calc((100%-150px) / 6);
 }
 
 .clients-link {
     display: flex;
-    width: 170px;
-    height: 92px;
+    width: 100%;
+    height: 100%;
     align-items: center;
     justify-content: center;
     border: 1px solid var(--color-fill-icons);
@@ -447,18 +463,24 @@ img{
     list-style: none;
     padding-left: 0;
     gap: 10px;
+    margin: 0;
 }
 
 .subscription {
     margin-left: 70px;
 }
 
+.subscription-item{
+    width: 44px;
+    height: 44px;
+}
+
 .subscription-link {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 44px;
-    height: 44px;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.1);
 }
@@ -511,6 +533,7 @@ img{
 .button-filter:focus{
     background-color: var(--color-brand);
     color: var(--color-background-primary);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .project-list{
